@@ -1,0 +1,9 @@
+{
+  "name": "doc-processor",
+  "version": "0.1.0",
+  "dependencies": [
+    "cpprestsdk",
+    "nlohmann-json",
+    "spdlog"
+  ]
+}
