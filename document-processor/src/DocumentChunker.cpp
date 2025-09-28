@@ -47,6 +47,11 @@ vector<DocumentChunk> DocumentChunker::extract_chunks(string &contents, string &
         size_t start_pos = headers[i].first;
         size_t end_pos = (i + 1 < headers.size()) ? headers[i + 1].first : contents.length();
 
+        size_t header_end = contents.find('\n', start_pos);
+        if (header_end != string::npos) {
+            start_pos = header_end + 1; // Start after the newline
+        }
+
         string chunk_text = contents.substr(start_pos, end_pos - start_pos);
         string header_text = headers[i].second;
 

@@ -13,7 +13,9 @@ add_executable(document_processor src/main.cpp
         src/Cleaner.cpp
         src/Cleaner.h
         src/DocumentChunker.cpp
-        src/DocumentChunker.h)
+        src/DocumentChunker.h
+        src/api/EmbeddingGenerator.cpp
+        src/api/EmbeddingGenerator.h)
 
 target_link_libraries(document_processor
         PRIVATE
